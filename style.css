@@ -1,0 +1,204 @@
+/* mobile first css
+    모바일 
+  스크린 크기가 767px보다 작을 경우 해당 스타일이 적용됩니다.*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li,
+a,
+button {
+  all: unset;
+}
+
+.wrap {
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 헤더 상단 영역 -----------------------------------------------------*/
+.header-upper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 60px;
+  border-bottom: 1px solid #ededed;
+}
+
+.searchMenu {
+  font-size: 1.5rem;
+  color: #35c5f0;
+}
+
+.header-upper__nav ul {
+  display: none;
+}
+
+.header-upper__logo {
+  font-family: "Gamja Flower";
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  order: 1;
+}
+
+.mobile-searchBar {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #757575;
+}
+
+.fa-shopping-cart {
+  font-size: 1.5rem;
+  color: #757575;
+}
+
+.header-upper__searchBar {
+  display: none;
+}
+
+.header-upper__service ul {
+  display: none;
+}
+
+/* 데스크탑 */
+@media screen and (min-width: 768px) {
+  /*  스크린의 크기가 768을 넘게된다면 해당 스타일을 적용합니다. */
+
+  /* 상단 헤더 영역 --------------------------------------------------------------- */
+  .header-upper {
+    height: 80px;
+    padding: 10px 60px;
+  }
+
+  .searchMenu {
+    display: none;
+  }
+
+  .mobile-searchBar {
+    font-size: 1rem;
+  }
+
+  .fa-shopping-cart {
+    font-size: 1rem;
+  }
+
+  .header-upper__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-upper__logo {
+    margin-right: 2rem;
+    order: 0;
+    font-size: 1.8rem;
+  }
+
+  .header-upper__service {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #757575;
+    font-weight: bold;
+  }
+
+  .header-upper__tog {
+    width: 100px;
+    height: 22px;
+    color: #fff;
+    padding: 8px 0 10px;
+    background: #35c5f0;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 22px;
+  }
+
+  .header-upper__tog::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    margin-left: 0.5rem;
+  }
+
+  .header-upper__nav ul {
+    display: flex;
+  }
+
+  .header-upper__item {
+    font-weight: bold;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .header-upper__item:nth-child(3) {
+    margin-right: 0;
+  }
+
+  .header-upper__item.upper__active {
+    color: #35c5f0;
+  }
+
+  .header-upper__item:hover {
+    color: #35c5f0;
+  }
+
+  .header-upper__service ul {
+    display: inline-block;
+  }
+
+  .header-upper__service ul li a {
+    margin: 0 9px 0 8px;
+    display: inline-block;
+  }
+
+  .header-upper__service ul li:nth-child(1) {
+    border-right: 1px solid #757575;
+    padding-right: 2px;
+  }
+
+  .header-upper__service ul li:nth-child(3) {
+    border-left: 1px solid #757575;
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-upper__searchBar input {
+    border: none;
+    width: 230px;
+    margin-left: 0.5rem;
+  }
+
+  .header-upper__searchBar input:focus {
+    outline: none;
+  }
+
+  .header-upper__searchBar .fa-search {
+    margin-left: 0.5rem;
+  }
+
+  .header-upper__searchBar {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+  }
+
+  .mobile-searchBar {
+    display: none;
+  }
+}
+
+@media (min-width: 1256px) {
+  .header-upper__service ul li:nth-child(3) {
+    display: inline-block;
+  }
+}
