@@ -18,22 +18,32 @@ button {
 .wrap {
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+}
+
+.inner {
+  max-width: 1136px;
+  margin: 0 auto;
 }
 
 /* 헤더 상단 영역 -----------------------------------------------------*/
 .header-upper {
+  border-bottom: 1px solid #ededed;
+}
+
+.header-upper .inner {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
   height: 60px;
-  border-bottom: 1px solid #ededed;
 }
 
 .searchMenu {
   font-size: 1.5rem;
   color: #35c5f0;
+  cursor: pointer;
 }
 
 .header-upper__nav ul {
@@ -48,15 +58,16 @@ button {
   order: 1;
 }
 
-.mobile-searchBar {
+.mobile-searchBar,
+.fa-shopping-cart {
   margin-right: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #757575;
+  cursor: pointer;
 }
 
 .fa-shopping-cart {
-  font-size: 1.5rem;
-  color: #757575;
+  margin-right: 0;
 }
 
 .header-upper__searchBar {
@@ -67,14 +78,68 @@ button {
   display: none;
 }
 
+/* 네비게이션 하단 영역 ---------------------------------------------------*/
+.header-lower {
+  border-bottom: 1px solid #ededed;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.header-lower .inner {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 40px;
+}
+
+.header-lower .inner nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #424242;
+}
+
+.header-lower__item {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #424242;
+  cursor: pointer;
+  margin: 8px 0;
+  padding: 4px 7px 4px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.header-lower__item:hover {
+  color: #35c5f0;
+}
+
+.header-lower__item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 8px -4px 0;
+  height: 2px;
+  background-color: #35c5f0;
+}
+
+.header-lower .inner div {
+  display: none;
+}
+
 /* 데스크탑 */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 783px) {
   /*  스크린의 크기가 768을 넘게된다면 해당 스타일을 적용합니다. */
 
   /* 상단 헤더 영역 --------------------------------------------------------------- */
+
   .header-upper {
     height: 80px;
-    padding: 10px 60px;
+    padding: 10px 50px;
   }
 
   .searchMenu {
@@ -166,9 +231,41 @@ button {
     border-left: 1px solid #757575;
     display: none;
   }
+
+  /* 하단 네비게이션 영역 -------------------------------------*/
+  .header-lower {
+    padding: 0 50px;
+  }
+
+  .header-lower .inner {
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+
+  .header-lower .inner nav {
+    padding-left: 1rem;
+  }
+
+  .header-lower__item {
+    font-size: 1rem;
+  }
+
+  .header-lower .inner div {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #424242;
+    cursor: pointer;
+    padding-right: 1rem;
+  }
+
+  .header-lower .inner div:hover {
+    color: #35c5f0;
+  }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1028px) {
   .header-upper__searchBar input {
     border: none;
     width: 230px;
