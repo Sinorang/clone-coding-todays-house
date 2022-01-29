@@ -107,7 +107,7 @@ button {
   cursor: pointer;
   margin: 8px 0;
   padding: 4px 7px 4px;
-  position: relative;
+  /* position: relative; */
   flex-shrink: 0;
 }
 
@@ -131,11 +131,86 @@ button {
   display: none;
 }
 
+/* 홈페이지 메인 전체 영역 -------------------------------------------------------------- */
+.container {
+  margin: 0 auto;
+  max-width: 1136px;
+  padding: 0;
+}
+
+/* 홈페이지 상단 이미지------------------------------------------------------------------ */
+.home-header__upper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.home-header__upper:hover img {
+  transform: scale(110%);
+}
+
+.home-header__upper:hover .home-header-tit a {
+  background: #35c5f0;
+  border: none;
+}
+
+.home-header__upper img {
+  width: 100%;
+  filter: brightness(65%);
+  transition: 0.3s;
+}
+
+.home-header-tit {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 2.5rem;
+  color: #fff;
+}
+
+.home-header-tit h4 {
+  font-size: 1.4rem;
+  padding: 1rem 0;
+}
+
+.home-header-tit a {
+  display: inline-block;
+  width: 100px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* 
+.home-header__upper div h2 {
+  font-size: 1.4rem;
+}
+
+.home-header__upper div a {
+  display: inline-block;
+  width: 100px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+} */
+
 /* 데스크탑 */
-@media screen and (min-width: 783px) {
+@media screen and (min-width: 785px) {
   /*  스크린의 크기가 768을 넘게된다면 해당 스타일을 적용합니다. */
 
   /* 상단 헤더 영역 --------------------------------------------------------------- */
+  .container {
+    padding: 2rem 50px;
+  }
 
   .header-upper {
     height: 80px;
@@ -173,7 +248,11 @@ button {
     font-weight: bold;
   }
 
-  .header-upper__tog {
+  .header-upper__service ul li {
+    cursor: pointer;
+  }
+
+  .header-upper__writeBt {
     width: 100px;
     height: 22px;
     color: #fff;
@@ -182,13 +261,76 @@ button {
     border-radius: 5px;
     text-align: center;
     line-height: 22px;
+    cursor: pointer;
+    position: relative;
   }
 
-  .header-upper__tog::after {
+  .header-upper__writeBt:hover {
+    background: #189ec7;
+  }
+
+  .header-upper__writeBt::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f078";
     margin-left: 0.5rem;
+  }
+
+  .header-upper__lists {
+    position: absolute;
+    z-index: 999;
+    top: 3.6rem;
+    right: 0;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 0 rgb(209, 209, 209);
+    width: 320px;
+    display: none;
+    transition: 1s;
+  }
+
+  .header-upper__lists::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    top: -10px;
+    left: 6.5rem;
+    z-index: 999;
+    transform: rotate(45deg);
+  }
+
+  .header-upper__lists.show {
+    display: inline-block;
+  }
+
+  .header-upper__lists a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem 1.3rem;
+    cursor: pointer;
+  }
+
+  .header-upper__lists a:last-child {
+    padding-bottom: 1rem;
+  }
+
+  .header-upper__lists a h4 {
+    color: #424242;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .header-upper__lists a p {
+    font-size: 0.8rem;
+    color: #424242;
   }
 
   .header-upper__nav ul {
@@ -263,9 +405,37 @@ button {
   .header-lower .inner div:hover {
     color: #35c5f0;
   }
+
+  /* 홈 페이지 상단 이미지---------------------------------------------------------------- */
+  .home-header__upper {
+    border-radius: 8px;
+  }
+
+  .home-header__upper img {
+    filter: none;
+    transition: 0.3s;
+  }
+
+  .home-header-tit {
+    top: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .home-header-tit h4 {
+    font-size: 1.6rem;
+  }
+
+  .home-header-tit a {
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
 }
 
-@media (min-width: 1028px) {
+@media (min-width: 1045px) {
   .header-upper__searchBar input {
     border: none;
     width: 230px;

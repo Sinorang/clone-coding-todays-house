@@ -22,12 +22,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 전체 레이아웃 -->
+  <!-- 전체 레이아웃--------------------------------------------------------------->
   <div class="wrap">
-    <!-- 상단 네비게이션 영역 -->
+    <!-- 상단 네비게이션 영역 ---------------------------------------------------->
     <header class="header">
       
-      <!-- 네비게이션 상단 -->
+      <!-- 네비게이션 상단 ------------------------------------------------------->
       <div class="header-upper">
         <div class="inner">
           <i class="fas fa-bars searchMenu"></i>
@@ -52,12 +52,41 @@
               <li><a href="">로그인</a></li>
               <li><a href="">회원가입</a></li>
               <li><a href="">고객센터</a></li>
-              <button class="header-upper__tog">글쓰기 </button>
+              <button class="header-upper__writeBt">
+                글쓰기
+                <div class="header-upper__lists">
+                  <a href="">
+                    <h4>사진 올리기</h4>
+                    <p>우리 집의 공간과 나의 일상을 기록해 보세요.</p>
+                  </a>
+                  <a href="">
+                    <h4>집들이 글쓰기</h4>
+                    <p>집에 관한 이야기를 글로 작성해 보세요.</p>
+                  </a>
+                  <a href="">
+                    <h4>노하우 글쓰기</h4>
+                    <p>다양한 인테리어 노하우를 공유해 주세요.</p>
+                  </a>
+                  <a href="">
+                    <h4>상품 리뷰 글쓰기</h4>
+                    <p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p>
+                  </a>
+                  <a href="">
+                    <h4>시공 전문가 리뷰쓰기</h4>
+                    <p>시공 전문가 리뷰를 작성하고 포인트도 받아보세요.</p>
+                  </a>
+                  <a href="">
+                    <h4>인테리어 질문하기</h4>
+                    <p>인테리어 고수들과 전문가들에게 질문해 보세요.</p>
+                  </a>
+                </div>
+              </button>
             </ul>
           </div>
         </div>
+        
       </div>
-      <!-- 네비게이션 하단 -->
+      <!-- 네비게이션 하단----------------------------------------------------------- -->
       <div class="header-lower">
         <div class="inner">
           <nav>
@@ -75,6 +104,26 @@
         </div>
       </div>
     </header>
+
+    <!-- 홈 페이지 전체 영역------------------------------------------------------------- -->
+    <div class="home-page">
+      <!-- 홈 페이지 상단 이미지 ------------------------------------------------------->
+      <div class="container home-header">
+        <div class="home-header__upper">
+          <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/projects/cover_images/164309149487027066.jpg?gif=1&w=850&h=567&c=c" alt="홈페이지 메인 이미지">
+          <div class="home-header-tit">
+            <h4>전형적인 구조를 색다르게!</h4>
+            <a href="#">보러가기</a>
+          </div>
+        </div>
+
+        <div class="home-header__lower">
+          <div class="home-header__lower-banner"></div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
