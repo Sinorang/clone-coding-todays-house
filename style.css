@@ -29,6 +29,7 @@ button {
 /* 헤더 상단 영역 -----------------------------------------------------*/
 .header-upper {
   border-bottom: 1px solid #ededed;
+  padding: 0 1rem;
 }
 
 .header-upper .inner {
@@ -104,8 +105,8 @@ button {
   font-weight: 700;
   color: #424242;
   cursor: pointer;
-  margin: 8px 0;
-  padding: 4px 7px 4px;
+  /* margin: 8px 0; */
+  padding: 11px 10px;
   /* position: relative; */
   flex-shrink: 0;
 }
@@ -114,16 +115,8 @@ button {
   color: #35c5f0;
 }
 
-.header-lower__item.active:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  margin: 8px -4px 0;
-  height: 2px;
-  background-color: #35c5f0;
+.header-lower__item.active {
+  border-bottom: 2px solid #35c5f0;
 }
 
 .header-lower .inner div {
@@ -137,7 +130,7 @@ button {
 
 .container {
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   max-width: 1136px;
   padding: 0;
 }
@@ -200,6 +193,7 @@ button {
 
 /* 모바일 홈페이지 하단 베너 이미지------------------------------------------------------------------ */
 .home-header__lower {
+  overflow: hidden;
 }
 
 .banner-item {
@@ -220,6 +214,40 @@ button {
 
 .row-img {
   display: none;
+}
+
+/* 모바일 홈 쇼트컷 전체 영역 ---------------------------------------------------------------------- */
+.home-shortcut {
+  margin: 1rem 0;
+}
+
+.home-shortcut__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-shortcut__item {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+  flex: 0 0 calc(25%);
+  cursor: pointer;
+}
+
+.home-shortcut__item a img {
+  width: 100%;
+}
+
+.home-shortcut__item a h4 {
+  display: block;
+  color: #000;
+  font-size: 0.8rem;
+  margin: 4px 0 10px;
+  font-weight: 500;
+  text-align: center;
 }
 
 /* 데스크탑 */
@@ -484,6 +512,16 @@ button {
 
   .row-img {
     display: inline-block;
+  }
+
+  /* 모바일을 넘어가면 홈 쇼트컷 전체 영역 ---------------------------------------------------------------------- */
+  .home-shortcut__item {
+    flex: 0 0 12.5%;
+  }
+
+  .home-shortcut__item a h4 {
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
 
