@@ -250,6 +250,84 @@ button {
   text-align: center;
 }
 
+/* 홈 섹션 공통 영역 -----------------------------------------------------------------------*/
+.home-section {
+  width: calc(100% -2rem);
+  max-width: 1136px;
+}
+
+/* 홈 스토리 영역 ----------------------------------------------------------------------------- */
+
+.home-stories {
+  display: flex;
+  flex-flow: column nowrap;
+  color: #000;
+  width: calc(100% - 2rem);
+  margin: 1rem;
+}
+
+.home-stories__tit {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem 0.5rem;
+}
+
+.home-stories__content {
+  display: flex;
+  flex-flow: row wrap;
+  width: cacl(100% - 1rem);
+}
+
+.home-stories__item {
+  flex: 1 1 calc(50% - 0.8rem);
+  padding: 0 0.4rem;
+  overflow: hidden;
+}
+
+.home-stories__item article h4 {
+  padding: 1rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+.home-stories__item__wrap {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.home-stories__item__wrap img {
+  width: 100%;
+  transition: 0.4s;
+  vertical-align: bottom;
+}
+
+.home-stories__item__wrap img:hover {
+  transform: scale(108%);
+}
+
+.home-stories__content__menu-wrap {
+  flex: 0 0 50%;
+  padding: 0 0.4rem;
+  align-items: stretch;
+}
+
+.home-stories__content__menu {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: -0.5px 0;
+  overflow: hidden;
+}
+
+.home-stories__content__menu__entry {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  background: #f5f5f5;
+  padding: 12.5px 10%;
+}
+
 /* 데스크탑 */
 @media screen and (min-width: 785px) {
   /*  스크린의 크기가 768을 넘게된다면 해당 스타일을 적용합니다. */
@@ -522,6 +600,15 @@ button {
   .home-shortcut__item a h4 {
     font-size: 1rem;
     font-weight: 700;
+  }
+
+  /* 모바일 넘어가면 홈 스토리 전체 영역 ------------------------------------------------*/
+  .home-stories__item {
+    flex: 1 1 calc(25% - 2rem);
+  }
+
+  .home-stories__content__menu-wrap {
+    flex: 0 0 25%;
   }
 }
 
