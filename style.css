@@ -587,6 +587,12 @@ button {
   vertical-align: bottom;
 }
 
+/* 운세 확인 배너 영역 */
+.checkLuckBanner {
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
 /* 데스크탑 */
 @media screen and (min-width: 785px) {
   /*  스크린의 크기가 768을 넘게된다면 해당 스타일을 적용합니다. */
