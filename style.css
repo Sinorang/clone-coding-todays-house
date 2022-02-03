@@ -258,6 +258,12 @@ button {
 
 /* 홈 스토리 영역 ----------------------------------------------------------------------------- */
 
+.home-section__tit {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem 0.5rem;
+}
+
 .home-stories {
   display: flex;
   flex-flow: column nowrap;
@@ -266,16 +272,10 @@ button {
   margin: 1rem;
 }
 
-.home-stories__tit {
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 1rem 0.5rem;
-}
-
 .home-stories__content {
   display: flex;
   flex-flow: row wrap;
-  width: cacl(100% - 1rem);
+  width: calc(100% - 1rem);
 }
 
 .home-stories__item {
@@ -315,8 +315,6 @@ button {
   flex: 1 0 auto;
   display: flex;
   flex-flow: column nowrap;
-  /* align-items: stretch; */
-  /* justify-content: stretch; */
   margin: -0.5px 0;
   overflow: hidden;
 }
@@ -344,6 +342,143 @@ button {
 
 .home-stories__content__menu__entry:hover {
   background: #d8d8d8;
+}
+
+/* 모바일 카테고리 전체 영역 */
+.home-category {
+  display: flex;
+  flex-flow: column nowrap;
+  color: #000;
+  width: calc(100% - 2rem);
+  margin: 1rem;
+}
+
+.home-category__wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  cursor: pointer;
+}
+
+.home-category__contents {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-category__item__wrap {
+  flex: 0 0 25%;
+  min-width: 10%;
+}
+
+.home-category__item__wrap div {
+  width: 100%;
+  height: 100%;
+}
+
+.home-category__item__wrap div a {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.home-category__item__wrap a img {
+  width: 80px;
+  height: 80px;
+}
+
+.home-category__item__wrap a h4 {
+  color: #424242;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  max-width: 98px;
+  margin: 20px auto 0;
+}
+
+/* 모바일 오늘의딜 전체 영역 */
+.home-section__wrap {
+  margin: 0 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.home-section__container {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+}
+
+.home-section__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.home-section__item:hover .home-section__item__sub {
+  color: #757575;
+}
+
+.home-section__item article a {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.home-section__img-wrap {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.home-section__item:hover article a img {
+  transform: scale(108%);
+}
+
+.home-section__item article a img {
+  width: 100%;
+  transition: 0.4s;
+  vertical-align: bottom;
+}
+
+.home-section__item article a {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.home-section__item__details {
+  width: calc(50% - 1rem);
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+.home-section__item__tit {
+  display: none;
+}
+
+.home-section__item__sub {
+  font-weight: 700;
+}
+
+.home-section__item__percent {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff7777;
+}
+
+.home-section__item__price {
+  display: none;
+}
+
+.home-section__item__review {
+  display: none;
 }
 
 /* 데스크탑 */
@@ -628,6 +763,89 @@ button {
   .home-stories__content__menu-wrap {
     flex: 0 0 25%;
   }
+
+  /* 모바일 넘어가면 카테고리 영역 */
+  .home-category__item__wrap {
+    flex: 0 0 16.6666666667%;
+  }
+
+  /* 모바일 넘어가면 오늘의딜 전체 영역 */
+  .home-section__item {
+    flex: 0 0 25%;
+  }
+
+  .home-section__item article a {
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+
+  .home-section__item article a img {
+    width: 100%;
+  }
+
+  .home-section__item__details {
+    width: 100%;
+    margin: 0;
+  }
+
+  .home-section__item__tit {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: #757575;
+  }
+
+  .home-section__item__sub {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    max-height: 34px;
+  }
+
+  .home-section__item__sale {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+  }
+
+  .home-section__item__percent {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff7777;
+    margin-right: 0.5rem;
+  }
+
+  .home-section__item__price {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .home-section__item__price {
+    display: inline-block;
+  }
+
+  .home-section__item__review {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #757575;
+    justify-content: flex-start;
+    align-content: center;
+  }
+
+  .home-section__item__grade {
+    margin: 0 0.4em;
+    color: #000;
+  }
+
+  .home-section__item__grade::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f005";
+    color: #35c5f0;
+    margin-right: 0.4em;
+  }
 }
 
 @media (min-width: 1045px) {
@@ -660,6 +878,11 @@ button {
 
   .container {
     margin: 0 auto;
+  }
+
+  /* 1045px 넘어가면 카테고리 영역 */
+  .home-category__item__wrap {
+    flex: 1;
   }
 }
 
