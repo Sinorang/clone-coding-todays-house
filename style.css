@@ -525,6 +525,7 @@ button {
   overflow: hidden;
   position: relative;
   margin: 0 0.4rem 0.8rem;
+  cursor: pointer;
 }
 
 .popular-item__wrap:nth-child(7),
