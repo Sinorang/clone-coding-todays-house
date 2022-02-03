@@ -415,8 +415,8 @@ button {
 }
 
 .home-section__item {
-  flex: 0 0 100%;
   max-width: 100%;
+  flex: 0 0 100%;
   cursor: pointer;
   overflow: hidden;
 }
@@ -479,6 +479,111 @@ button {
 
 .home-section__item__review {
   display: none;
+}
+
+/* 모바일 인기 사진 영역 */
+.home-section__wrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.home-section__tit__wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poular-item__more__desktop {
+  display: none;
+}
+
+.poular-item__more__mobile {
+  font-weight: 700;
+  width: 100%;
+  height: 49px;
+  line-height: 49px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.poular-item__more__mobile:hover {
+  background-color: #d8d8d8;
+}
+
+.popular-content__wrap {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.popular-item__wrap {
+  flex: 1 1 calc(50% - 0.8rem);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 0.4rem 0.8rem;
+}
+
+.popular-item__wrap:nth-child(7),
+.popular-item__wrap:nth-child(8) {
+  display: none;
+}
+
+.popular-item__number {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background: #35c5f0;
+  opacity: 0.8;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.popular-item__number::before {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  content: "";
+  display: inline-block;
+  border-left: 30px solid #35c5f0;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.popular-item__number::after {
+  position: absolute;
+  top: 30px;
+  left: -15px;
+  content: "";
+  display: inline-block;
+  border-right: 30px solid #35c5f0;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid transparent;
+}
+
+.popular-item__wrap:hover img {
+  transform: scale(108%);
+}
+
+.popular-item__wrap a article {
+}
+
+.popular-item__wrap a article div {
+  overflow: hidden;
+}
+
+.popular-item__wrap a article div img {
+  width: 100%;
+  transition: 0.4s;
+  vertical-align: bottom;
 }
 
 /* 데스크탑 */
@@ -845,6 +950,27 @@ button {
     content: "\f005";
     color: #35c5f0;
     margin-right: 0.4em;
+  }
+
+  /* 모바일 넘어가면 인기 사진 영역 */
+  .popular-item__wrap {
+    flex: 1 1 calc(25% - 0.8rem);
+  }
+
+  .popular-item__wrap:nth-child(7),
+  .popular-item__wrap:nth-child(8) {
+    display: inline-block;
+  }
+
+  .poular-item__more__mobile {
+    display: none;
+  }
+
+  .poular-item__more__desktop {
+    display: inline-block;
+    color: #35c5f0;
+    font-weight: 700;
+    cursor: pointer;
   }
 }
 
