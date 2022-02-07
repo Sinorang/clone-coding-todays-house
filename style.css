@@ -507,6 +507,7 @@ button {
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .poular-item__more__mobile:hover {
@@ -590,7 +591,141 @@ button {
 /* 운세 확인 배너 영역 */
 .checkLuckBanner {
   cursor: pointer;
+  margin: 2rem 0;
+}
+
+.luck-mobile {
+  display: inline-block;
+}
+
+.luck-desktop {
+  display: none;
+}
+/* 유저 인테리어 리뷰 영역 */
+/* .user-review__wrap {
   margin-top: 2rem;
+}
+
+.user-review__content {
+  display: flex;
+  flex-flow: column nowrap;
+  width: calc(100% - 2rem);
+}
+
+.user-review__item {
+  margin-bottom: 1rem;
+}
+
+.user-review__item:hover img {
+  transform: scale(108%);
+}
+
+.user-review__item a article {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-review__img__wrap {
+  flex: 0 0 35%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.user-review__img__wrap img {
+  width: 100%;
+  transition: 0.4s;
+  vertical-align: bottom;
+}
+
+.user-review__details {
+  flex: 0 0 65%;
+  padding: 4px 0 0 12px;
+}
+
+.user-review__star {
+  color: #35c5f0;
+  letter-spacing: -1px;
+  font-size: 0.8rem;
+}
+
+.user-review__text p {
+  height: 3.5rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  overflow: hidden;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  margin-top: 6px;
+}
+
+.user-review__bland {
+  font-weight: 600;
+  margin-top: 0.8rem;
+} */
+
+.user-review__wrap {
+  margin-top: 2rem;
+}
+
+.user-review__content {
+  display: flex;
+  flex-flow: row nowrap;
+  width: calc(100%);
+}
+
+.user-review__item {
+  flex: 0 0 33%;
+}
+
+.user-review__item:hover img {
+  transform: scale(108%);
+}
+
+.user-review__item a article {
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+
+.user-review__img__wrap {
+  flex: 1 1 200px;
+  overflow: hidden;
+  /* border-radius: 8px; */
+}
+
+.user-review__img__wrap img {
+  width: 100%;
+  transition: 0.4s;
+  vertical-align: bottom;
+}
+
+.user-review__details {
+  /* flex: 0 0 65%; */
+  /* padding: 4px 0 0 12px; */
+}
+
+.user-review__star {
+  color: #35c5f0;
+  letter-spacing: -1px;
+  font-size: 0.8rem;
+}
+
+.user-review__text p {
+  height: 3.5rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  overflow: hidden;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  margin-top: 6px;
+}
+
+.user-review__bland {
+  font-weight: 600;
+  margin-top: 0.8rem;
 }
 
 /* 데스크탑 */
@@ -979,6 +1114,17 @@ button {
     font-weight: 700;
     cursor: pointer;
   }
+
+  /* 모바일 넘어가면 운세 배너 영역 */
+  .luck-mobile {
+    display: none;
+  }
+
+  .luck-desktop {
+    display: inline-block;
+  }
+
+  /* 모바일 넘어가면 유저 인테리어 리뷰 영역 */
 }
 
 @media (min-width: 1045px) {
