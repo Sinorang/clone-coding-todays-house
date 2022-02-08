@@ -1116,6 +1116,10 @@ button {
   }
 
   /* 모바일 넘어가면 운세 배너 영역 */
+  .checkLuckBanner {
+    margin: 2rem 1rem;
+  }
+
   .luck-mobile {
     display: none;
   }
