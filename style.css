@@ -252,8 +252,9 @@ button {
 
 /* 홈 섹션 공통 영역 -----------------------------------------------------------------------*/
 .home-section {
-  width: calc(100% -2rem);
+  width: calc(100% -1rem);
   max-width: 1136px;
+  margin: 0 0.5rem;
 }
 
 /* 홈 스토리 영역 ----------------------------------------------------------------------------- */
@@ -261,7 +262,7 @@ button {
 .home-section__tit {
   font-size: 1.1rem;
   font-weight: 700;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
 }
 
 .home-stories {
@@ -403,7 +404,6 @@ button {
 
 /* 모바일 오늘의딜 전체 영역 */
 .home-section__wrap {
-  margin: 0 1rem;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -432,7 +432,7 @@ button {
 
 .home-section__img-wrap {
   overflow: hidden;
-  width: 100%;
+  width: 50%;
   border-radius: 10px;
 }
 
@@ -452,7 +452,7 @@ button {
 }
 
 .home-section__item__details {
-  width: calc(50% - 1rem);
+  width: calc(50% - 2rem);
   display: flex;
   flex-flow: column nowrap;
   margin-left: 1rem;
@@ -507,7 +507,6 @@ button {
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
-  margin-top: 1rem;
 }
 
 .poular-item__more__mobile:hover {
@@ -517,7 +516,7 @@ button {
 .popular-content__wrap {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  width: calc(100% - 1rem);
 }
 
 .popular-item__wrap {
@@ -588,7 +587,11 @@ button {
   vertical-align: bottom;
 }
 
-/* 운세 확인 배너 영역 */
+/* 운세 확인 배너 영역 -----------------------------------------------------------------*/
+.banner-wrap {
+  margin: 0;
+}
+
 .checkLuckBanner {
   cursor: pointer;
   margin: 2rem 0;
@@ -601,19 +604,18 @@ button {
 .luck-desktop {
   display: none;
 }
-/* 유저 인테리어 리뷰 영역 */
-/* .user-review__wrap {
-  margin-top: 2rem;
-}
+/* 유저 인테리어 리뷰 영역 -----------------------------------------------------------------*/
 
 .user-review__content {
   display: flex;
   flex-flow: column nowrap;
-  width: calc(100% - 2rem);
+  width: 100%;
 }
 
 .user-review__item {
+  flex: 0 0 100%;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .user-review__item:hover img {
@@ -623,7 +625,7 @@ button {
 .user-review__item a article {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -640,71 +642,8 @@ button {
 }
 
 .user-review__details {
-  flex: 0 0 65%;
+  flex: 0 0 calc(64% - 1rem);
   padding: 4px 0 0 12px;
-}
-
-.user-review__star {
-  color: #35c5f0;
-  letter-spacing: -1px;
-  font-size: 0.8rem;
-}
-
-.user-review__text p {
-  height: 3.5rem;
-  font-size: 0.9rem;
-  line-height: 1.2rem;
-  overflow: hidden;
-  word-break: break-word;
-  text-overflow: ellipsis;
-  margin-top: 6px;
-}
-
-.user-review__bland {
-  font-weight: 600;
-  margin-top: 0.8rem;
-} */
-
-.user-review__wrap {
-  margin-top: 2rem;
-}
-
-.user-review__content {
-  display: flex;
-  flex-flow: row nowrap;
-  width: calc(100%);
-}
-
-.user-review__item {
-  flex: 0 0 33%;
-}
-
-.user-review__item:hover img {
-  transform: scale(108%);
-}
-
-.user-review__item a article {
-  display: flex;
-  flex-flow: column nowrap;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-}
-
-.user-review__img__wrap {
-  flex: 1 1 200px;
-  overflow: hidden;
-  /* border-radius: 8px; */
-}
-
-.user-review__img__wrap img {
-  width: 100%;
-  transition: 0.4s;
-  vertical-align: bottom;
-}
-
-.user-review__details {
-  /* flex: 0 0 65%; */
-  /* padding: 4px 0 0 12px; */
 }
 
 .user-review__star {
@@ -1035,6 +974,10 @@ button {
     margin: 0;
   }
 
+  .home-section__img-wrap {
+    width: 100%;
+  }
+
   .home-section__item__tit {
     display: inline-block;
     font-size: 0.7rem;
@@ -1095,6 +1038,10 @@ button {
   }
 
   /* 모바일 넘어가면 인기 사진 영역 */
+  .popular-content__wrap {
+    width: 100%;
+  }
+
   .popular-item__wrap {
     flex: 1 1 calc(25% - 0.8rem);
   }
@@ -1116,9 +1063,9 @@ button {
   }
 
   /* 모바일 넘어가면 운세 배너 영역 */
-  .checkLuckBanner {
-    margin: 2rem 1rem;
-  }
+  /* .checkLuckBanner {
+    margin: 0;
+  } */
 
   .luck-mobile {
     display: none;
@@ -1129,6 +1076,29 @@ button {
   }
 
   /* 모바일 넘어가면 유저 인테리어 리뷰 영역 */
+  .user-review__content {
+    flex-direction: row;
+  }
+
+  .user-review__item {
+    flex: 1 1 calc(100% / 3);
+  }
+
+  .user-review__item a article {
+    flex-flow: column nowrap;
+  }
+
+  .user-review__item:nth-child(2) {
+    margin: 0 1rem;
+  }
+
+  .user-review__img__wrap {
+    flex: 0 0 100%;
+  }
+
+  .user-review__details {
+    padding-top: 1em;
+  }
 }
 
 @media (min-width: 1045px) {
