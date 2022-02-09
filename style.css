@@ -667,6 +667,58 @@ button {
   margin-top: 0.8rem;
 }
 
+/* 모바일 하단 영역 -------------------------------------------------------------*/
+.footer {
+  width: 100%;
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.footer-upper {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.footer-upper ul li a svg {
+  width: 1.5rem;
+  height: auto;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.footer-upper div h4 {
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 0.2em;
+}
+
+.footer-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer-upper div span {
+  color: rgb(97, 97, 97);
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-lower {
+  font-size: 0.7rem;
+  color: #424242;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.footer-lower li {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
 /* 데스크탑 */
 @media screen and (min-width: 785px) {
   /*  스크린의 크기가 768을 넘게된다면 해당 스타일을 적용합니다. */
@@ -1098,6 +1150,13 @@ button {
 
   .user-review__details {
     padding-top: 1em;
+  }
+
+  /* 모바일 넘어가면 하단 영역 ----------------------------------------------------*/
+  .footer-upper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
