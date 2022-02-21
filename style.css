@@ -808,6 +808,10 @@ button {
     transition: 1s;
   }
 
+  .header-upper__lists.openWirteMenu {
+    display: block;
+  }
+
   .header-upper__lists::before {
     content: "";
     display: inline-block;
