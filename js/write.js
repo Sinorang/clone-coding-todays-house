@@ -6,7 +6,7 @@ const openWriteMenu = () => {
 }
 
 const closeWriteMenu = (event) => {
-  if(event.target !== writeMenu && event.target !== writeBt) {
+  if (event.target !== writeMenu && event.target !== writeBt) {
     writeMenu.classList.remove('openWirteMenu');
   }
 }

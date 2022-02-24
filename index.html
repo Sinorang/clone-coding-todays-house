@@ -19,7 +19,8 @@
   <!-- 아이콘 용 폰트 어썸 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobileSearch.css">
 </head>
 <body>
   <!-- 전체 레이아웃--------------------------------------------------------------->
@@ -86,6 +87,55 @@
         </div>
         
       </div>
+
+      <!-- 모바일 메뉴 영역 --------------------------------------------------- -->
+      <div class="modal__content-wrap">
+        <div class="modal__content-container">
+          <div class="modal-layout modal__content-tit">
+            <div class="header-upper__logo modal-logo"><a href="">오늘의집</a></div>
+            <div><a href="">앱다운로드</a></div>
+          </div>
+          <div class="modal-layout modal__content-login">
+            <a href="">
+              <button>로그인</button>
+            </a>
+            <a href="">
+              <button>회원가입</button>
+            </a>
+          </div>
+          <ul class="modal-layout modal__content community">
+            <h4>커뮤니티</h4>
+            <i class="fa-solid fa-angle-down"></i>
+          </ul>
+          <ul class="modal-layout modal__content store">
+            <h4>스토어</h4>
+            <i class="fa-solid fa-angle-down"></i>
+          </ul>
+          <ul class="modal-layout modal__content interior">
+            <h4>인테리어시공</h4>
+            <i class="fa-solid fa-angle-down"></i>
+          </ul>
+          <ul class="modal-layout modal__content">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">나의 쇼핑</a></li>
+            <li><a href="">스크랩북</a></li>
+            <li><a href="">알림</a></li>
+            <li><a href="">이벤트</a></li>
+            <li><a href="">사진 올리기</a></li>
+            <li><a href="">집들이 글쓰기</a></li>
+            <li><a href="">노하우 글쓰기</a></li>
+            <li><a href="">상품 리뷰 쓰기</a></li>
+            <li><a href="">시공 전문가 리뷰 쓰기</a></li>
+            <li><a href="">인테리어 질문하기</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+          <ul class="modal-layout modal__content">
+            <li href=""><a href="">전문가 신청</a></li>
+            <li href=""><a href="">판매자 신청</a></li>
+          </ul>
+        </div>
+      </div>
+
       <!-- 네비게이션 하단----------------------------------------------------------- -->
       <div class="header-lower">
         <div class="inner">
@@ -125,9 +175,9 @@
             <ul class="banner-slider">
               <li class="banner-item">
                 <a href="">
-                <img class="col-img" src="https://image.ohou.se/i/bucketplace-v2-development/static/home_banner/sign_up_mobile_v2.png?gif=1&w=850" alt="베너 이미지1">
-                <img class="row-img" src="https://image.ohou.se/i/bucketplace-v2-development/static/home_banner/sign_up_web_v2.png?gif=1&w=512" alt="베너 이미지1">
-              </a>
+                  <img class="col-img" src="https://image.ohou.se/i/bucketplace-v2-development/static/home_banner/sign_up_mobile_v2.png?gif=1&w=850" alt="베너 이미지1">
+                  <img class="row-img" src="https://image.ohou.se/i/bucketplace-v2-development/static/home_banner/sign_up_web_v2.png?gif=1&w=512" alt="베너 이미지1">
+                </a>
               </li>
             </ul>
           </div>
@@ -810,5 +860,6 @@
   </div>
 
   <script src="js/write.js"></script>
+  <script src="js/mobileSearch.js"></script>
 </body>
 </html>
