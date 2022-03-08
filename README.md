@@ -14,9 +14,5 @@
 
 ![Screenshot from 2022-03-08 13-50-20](https://user-images.githubusercontent.com/92058864/157168548-82de7793-6f2b-4064-b654-d59ff1bf8686.png)
 
-
-- **html, css :** 레이아웃과 스타일을 제대로 활용할 수 있는지에 초점을 맞춰 작성한 페이지입니다.
-  - back to top같은 간단한 이벤트 포함
-
 [블로그 정리](https://velog.io/@duboo/%ED%81%B4%EB%A1%A0-%EC%BD%94%EB%94%A9-1.-html-css) <br>
 [클론 사이트](https://duboo31.github.io/clone-coding-todays-house/)
