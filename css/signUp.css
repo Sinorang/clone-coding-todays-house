@@ -9,8 +9,9 @@ section {
     margin: 20px;
 }
 span {
-    color: gainsboro;
+    color: rgb(146, 140, 148);
     font-size: 13px;
+    margin-bottom: 5px;
 }
 /* 회원가입 컨테이너 */
 .join-container {
@@ -171,17 +172,17 @@ form div span {
     margin: 0 2px;
 }
 .email_button {
-    background-color: gainsboro;
-    color: #fff;
+    background-color: rgb(247, 248, 250);
+    color: rgb(194, 200, 204);
     padding: 10px;
-    border: 1px solid rgb(128, 128, 128);
-    border-radius: 3px;
+    border: 1px solid rgb(218, 220, 224);
     cursor: pointer;
     font-size: 16px;
-    width: 95%;
+    width: 100%;
     border-radius: 5px;
     text-align: center;
     display: inline-block;
+    font-weight: bold;
 }
 /* 약관동의 */
 .agree {
@@ -235,7 +236,7 @@ form div span {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    font-size: 10px;
+    font-size: 13px;
     position: relative;
 }
 .agree-options label a {
@@ -391,6 +392,7 @@ form div span {
     width: 60%;
     font-size: 16px;
     display: block;
+    font-weight: bold;
 }
 
 .join:hover {
